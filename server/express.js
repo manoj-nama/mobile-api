@@ -15,5 +15,4 @@ module.exports = function (app) {
 	app.use(express.static(path.join(root, 'client')));
 	app.set('appPath', 'client');
 	app.locals.appPath = 'client';
-	app.use(morgan('custom', {"stream": logger.stream}));
 };

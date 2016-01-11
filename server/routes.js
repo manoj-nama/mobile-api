@@ -1,13 +1,12 @@
 'use strict';
 
-var ejs = require('ejs'),
-	fs = require('fs'),
+var fs = require('fs'),
 	request = require('request');
 
 module.exports = function (app) {
 	app.use("/v1/api/sessions", require("./api/session"));
 	app.use("/v1/api/users", require("./api/user"));
-	app.use('/auth', require('./auth'));
+	// app.use('/auth', require('./auth'));
 	
 	app.route('/*')
 		.get(function (req, res, next) {

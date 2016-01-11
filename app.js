@@ -1,10 +1,10 @@
 'use strict';
 
 var express = require('express'),
-mongoose = require('mongoose'),
-path = require('path'),
-server,
-app;
+	mongoose = require('mongoose'),
+	path = require('path'),
+	server,
+	app;
 
 
 // Set default node environment to development
@@ -21,6 +21,6 @@ require('./server/express')(app);
 require('./server/routes')(app);
 
 // Start server
-server.listen(9000, "0,0,0,0", function () {
-	logger.info('Server listening');
+server.listen(9000, "0.0.0.0", function () {
+	console.log('Server listening');
 });
