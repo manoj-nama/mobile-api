@@ -19,7 +19,7 @@ var UserSchema = new Schema({
 	password: String,
 	dateCreated: {type: Number, default: Date.now},
 	lastUpdated: {type: Number, default: Date.now},
-	roles: {type: String, enum: ["USER", "ADMIN", "OWNER"], default: "USER"},
+	role: {type: String, enum: ["USER", "ADMIN", "OWNER"], default: "USER"},
 	profileImage: String
 });
 

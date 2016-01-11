@@ -24,7 +24,7 @@ function bootstrapUsers(callback) {
 						last: "nama",
 						full: "manoj nama"
 					},
-					roles: "ADMIN"
+					role: "ADMIN"
 				}).save(cb);
 			});
 			tasks.push(function (cb) {
@@ -35,7 +35,7 @@ function bootstrapUsers(callback) {
 						last: "tyagi",
 						full: "kaku tyagi"
 					},
-					roles: "ADMIN"
+					role: "ADMIN"
 				}).save(cb);
 			});
 			async.parallel(tasks, callback);
