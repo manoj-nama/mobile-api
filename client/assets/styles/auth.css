@@ -1,0 +1,77 @@
+.login-wrapper {
+    max-width: 500px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+.login-header {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.login-header h1 {
+    color: #333;
+    font-weight: 300;
+    font-size: 1.8em;
+}
+
+.login-body {
+    padding: 30px 10px;
+}
+.login-body label {
+    padding: 10px;
+}
+.login-body .text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.login-body button {
+    margin: 20px auto;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: all 0.3s;
+    background-color: #09f;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    color: #fff;
+    border: 0;
+    font-size: 1em;
+}
+.login-body button:hover {
+    background-color: #08d;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.3);
+}
+
+.login-body button:disabled{
+    background-color: #ddd;
+    box-shadow: none;
+}
+
+/* COMMON */
+form {
+
+}
+.input {
+    font-size: 1em;
+    outline: none;
+}
+
+.input.text {
+    padding: 10px;
+    border: 0;
+    background-color: #f5f5f5;
+    border-bottom: 2px solid #dddddd;
+}
+.input.text:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #07f;
+}
+
+label {
+    font-family: "Open Sans", sans-serif;
+    display: block;
+}
