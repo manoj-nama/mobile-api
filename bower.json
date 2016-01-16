@@ -1,0 +1,17 @@
+{
+  "name": "mobile-api",
+  "version": "1.0.0",
+  "description": "Test API for react-native experiments",
+  "authors": [
+    "Manoj Nama"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/manoj-nama/mobile-api",
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "angular": "~1.4.8",
+    "jquery": "~2.2.0",
+    "font-awesome": "~4.5.0",
+    "angular-bootstrap": "~1.0.3"
+  }
+}
