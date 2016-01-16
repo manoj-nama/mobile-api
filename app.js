@@ -22,5 +22,5 @@ require('./server/seed')();
 
 // Start server
 server.listen(9000, "0.0.0.0", function () {
-	console.log('Server listening');
+	console.log('Server listening on port 9000');
 });
