@@ -2,9 +2,9 @@
 
 (function (angular) {
 
-    angular.module("api")
-        .controller("MainCtrl", function ($state) {
-            console.log("MainCtrl");
-        });
+	angular.module("api")
+		.controller("MainCtrl", function ($state) {
+			console.log("MainCtrl");
+		});
 
 })(angular);

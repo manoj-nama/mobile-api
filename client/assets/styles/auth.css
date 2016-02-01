@@ -1,5 +1,5 @@
 .login-wrapper {
-    max-width: 500px;
+    max-width: 400px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     margin: 50px auto;
     background-color: #fff;
@@ -33,17 +33,18 @@
     padding: 10px 15px;
     display: block;
     border-radius: 5px;
+    outline: none;
     transition: all 0.3s;
-    background-color: #09f;
+    background-color: #fc0;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    color: #fff;
+    color: #333;
     border: 0;
     font-size: 1em;
 }
 .login-body button:hover {
-    background-color: #08d;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.3);
+    transform: scale(1.1);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 .login-body button:disabled{
