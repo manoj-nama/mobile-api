@@ -4,7 +4,7 @@
   "description": "Test API for react-native experiments",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "bower install && gulp build",
     "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +25,11 @@
     "compression": "^1.6.0",
     "cookie-parser": "^1.4.0",
     "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-uglify": "^1.5.1",
+    "main-bower-files": "^2.11.1",
     "mongoose": "^4.3.4",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
