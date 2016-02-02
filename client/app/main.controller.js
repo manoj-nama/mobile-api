@@ -4,7 +4,7 @@
 
 	angular.module("api")
 		.controller("MainCtrl", function ($state) {
-			console.log("MainCtrl");
+			//console.log("MainCtrl");
 		});
 
 })(angular);

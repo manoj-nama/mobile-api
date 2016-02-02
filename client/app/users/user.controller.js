@@ -4,7 +4,7 @@
 
 	angular.module("api")
 		.controller("UserCtrl", function () {
-			console.log("UserCtrl");
+			//console.log("UserCtrl");
 		});
 
 })(angular);

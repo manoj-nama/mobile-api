@@ -15,3 +15,16 @@ exports.index = function (req, res) {
 		}
 	});
 };
+
+exports.show = function (req, res) {
+   var sessId = req.param("id");
+
+   Session.findOne({_id: sessId}).lean().exec(function (err, session) {
+      if(err) {
+         console.log("Error fetching Session", err);
+         res.status(404).send(err);
+      } else {
+         res.status(200).json({session: session});
+      }
+   })
+};

@@ -4,7 +4,7 @@
 
 	angular.module("api")
 		.controller("DashboardCtrl", function () {
-			console.log("DashboardCtrl");
+			//console.log("DashboardCtrl");
 		});
 
 })(angular);

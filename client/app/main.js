@@ -22,20 +22,26 @@
                templateUrl: "app/dashboard/dashboard.html",
                controller: "DashboardCtrl as DashCtrl"
             })
-            .state("main.dashboard.sessions", {
-               url: "/sessions",
+            .state("main.sessions", {
+               url: "sessions",
                authenticate: true,
                templateUrl: "app/session/session.html",
                controller: "SessionCtrl as SessionCtrl"
             })
-            .state("main.dashboard.users", {
-               url: "/users",
+            .state("main.sessions.detail", {
+               url: "/:sessionId",
+               authenticate: true,
+               templateUrl: "app/session/session.detail.html",
+               controller: "SessionDetailCtrl as SessionDetailCtrl"
+            })
+            .state("main.users", {
+               url: "users",
                authenticate: true,
                templateUrl: "app/users/user.html",
                controller: "UserCtrl as UserCtrl"
             })
-            .state("main.dashboard.bootcamp", {
-               url: "/bootcamp",
+            .state("main.bootcamp", {
+               url: "bootcamp",
                authenticate: true,
                templateUrl: "app/bootcamp/bootcamp.html",
                controller: "BootcampCtrl as BootcampCtrl"
