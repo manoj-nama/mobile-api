@@ -34,6 +34,12 @@
                templateUrl: "app/session/session.detail.html",
                controller: "SessionDetailCtrl as SessionDetailCtrl"
             })
+            .state("main.sessions.edit", {
+               url: "/edit/:sessionId",
+               authenticate: true,
+               templateUrl: "app/session/session.edit.html",
+               controller: "SessionEditCtrl as SessionEditCtrl"
+            })
             .state("main.users", {
                url: "users",
                authenticate: true,

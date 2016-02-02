@@ -20,7 +20,16 @@
          //console.log("SessionDetailCtrl", $stateParams);
 
          SessionApi.get({id: $stateParams.sessionId}, function (resp) {
-            //console.log(resp.session);
+            console.log(resp.session);
+            self.session = resp.session;
+         });
+      }])
+      .controller("SessionEditCtrl", ["$stateParams", "SessionApi", function ($stateParams, SessionApi) {
+         var self = this;
+         //console.log("SessionDetailCtrl", $stateParams);
+
+         SessionApi.get({id: $stateParams.sessionId}, function (resp) {
+            console.log(resp.session);
             self.session = resp.session;
          });
       }]);

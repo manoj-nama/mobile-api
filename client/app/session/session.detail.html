@@ -1,8 +1,11 @@
-<header id="nav">
-   <h1 class="page-center">Sessions Detail</h1>
-</header>
+<section>
+   <div class="list-wrap filled">
+      <h1 class="page-center">{{SessionDetailCtrl.session.title}}</h1>
 
-<section class="container">
-   <div class="list-wrap">
+      <div class="detail">
+         <em class="page-center desc">{{SessionDetailCtrl.session.description}}</em>
+      </div>
    </div>
+
+   <a ui-sref="main.sessions.edit({sessionId: SessionDetailCtrl.session._id})">Edit</a>
 </section>

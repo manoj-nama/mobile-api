@@ -38,11 +38,16 @@
 }
 
 .nav-content {
-   padding-top: 50px;
+   padding-top: 70px;
 }
 
 .list-wrap {
    border-top: 1px solid #ddd;
+}
+.list-wrap.filled {
+   border: 0;
+   background-color: #fff;
+   border-radius: 5px;
 }
 .list-wrap .list-item {
    padding: 10px;
@@ -65,4 +70,19 @@
 .list-wrap .list-item p {
    font-family: "Open Sans", sans-serif;
    font-weight: 300;
+}
+
+
+.list-wrap.filled h1 {
+   padding: 10px 0;
+   border-bottom: 1px solid #eee;
+   margin-bottom: 10px;
+   font-size: 1.8em;
+   font-weight: 100;
+}
+
+em.desc {
+   font-style: italic;
+   font-weight: 300;
+   display: block;
 }
