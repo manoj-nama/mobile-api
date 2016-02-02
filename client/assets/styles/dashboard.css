@@ -27,7 +27,7 @@
    border-right: 1px solid #fff;
    font-family: "Open Sans", sans-serif;
    text-align: center;
-   padding: 10px 15px;
+   padding: 10px;
 }
 .dashboard-header .menu a.active {
    background-color: #fc0;
