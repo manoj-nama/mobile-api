@@ -2,7 +2,7 @@
 
 (function (angular) {
 
-    angular.module("api", ["ui.router", "ui.bootstrap"])
+    angular.module("api", ["ui.router", "ui.bootstrap", "ngResource"])
         .config(["$locationProvider", "$urlRouterProvider", function ($locationProvider, $urlRouterProvider) {
             $locationProvider.html5Mode(true);
             $locationProvider.hashPrefix("!");

@@ -1,3 +1,12 @@
 <header id="nav">
    <h1 class="page-center">Sessions</h1>
 </header>
+
+<section class="container">
+   <div class="list-wrap">
+      <div class="list-item" data-ng-repeat="session in SessionCtrl.sessions track by $index">
+         <h3>{{session.title}}</h3>
+         <p>{{session.description}}</p>
+      </div>
+   </div>
+</section>

@@ -4,7 +4,7 @@
    display: flex;
    color: #333;
    flex-wrap: wrap;
-   box-shadow: 0 0 20px rgba(0,0,0,0.1);
+   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
    background-color: #fff;
    position: fixed;
    top: 0;
@@ -39,4 +39,30 @@
 
 .nav-content {
    padding-top: 50px;
+}
+
+.list-wrap {
+   border-top: 1px solid #ddd;
+}
+.list-wrap .list-item {
+   padding: 10px;
+   cursor: pointer;
+   background-color: #fff;
+   margin: 10px 0;
+   transition: opacity 0.3s, box-shadow 0.3s;
+   border-radius: 5px;
+}
+.list-wrap .list-item:hover {
+   box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+.list-wrap .list-item:active {
+   opacity: 0.3;
+   box-shadow: none;
+}
+.list-wrap .list-item h3 {
+   padding: 3px 0;
+}
+.list-wrap .list-item p {
+   font-family: "Open Sans", sans-serif;
+   font-weight: 300;
 }
