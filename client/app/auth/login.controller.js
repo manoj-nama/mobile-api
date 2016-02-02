@@ -2,16 +2,16 @@
 
 (function (angular) {
 
-	angular.module("api")
-	.controller("LoginCtrl", function () {
-		console.log("LoginCtrl");
+   angular.module("api")
+      .controller("LoginCtrl", function () {
+         console.log("LoginCtrl");
 
-		var LoginCtrl = this;
-		LoginCtrl.form = {};
+         var LoginCtrl = this;
+         LoginCtrl.form = {};
 
-		LoginCtrl.login = function () {
+         LoginCtrl.login = function () {
 
-		};
-	});
+         };
+      });
 
 })(angular);
