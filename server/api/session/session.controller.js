@@ -17,7 +17,7 @@ exports.index = function (req, res) {
 };
 
 exports.show = function (req, res) {
-   var sessId = req.param("id");
+   var sessId = req.params.id;
 
    Session.findOne({_id: sessId}).lean().exec(function (err, session) {
       if(err) {

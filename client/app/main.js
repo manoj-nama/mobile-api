@@ -51,6 +51,12 @@
                authenticate: true,
                templateUrl: "app/bootcamp/bootcamp.html",
                controller: "BootcampCtrl as BootcampCtrl"
+            })
+            .state("main.bootcamp.detail", {
+               url: "/:bootcampId",
+               authenticate: true,
+               templateUrl: "app/bootcamp/bootcamp.html",
+               controller: "BootcampCtrl as BootcampCtrl"
             });
       }]);
 
