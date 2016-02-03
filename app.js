@@ -11,7 +11,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Connect to database
 mongoose.connect("mongodb://localhost/mobile-api");
-mongoose.set('debug', true);
+mongoose.set('debug', false);
 
 // Setup server
 app = express();
