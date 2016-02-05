@@ -12,8 +12,6 @@ module.exports = function (app) {
 	app.use(bodyParser());	
 	app.use(cookieParser());
 
-   console.log(config);
-
 	app.use(express.static(path.join(process.cwd(), 'client')));
 	app.set('appPath', 'client');
 	app.locals.appPath = 'client';

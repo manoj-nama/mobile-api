@@ -5,6 +5,8 @@ var _ = require("lodash"),
    environment = process.env.NODE_ENV || "development";
 
 var all = {
+   ip: "0.0.0.0",
+   port: 9000,
    mongo: {
       options: {
          db: {
