@@ -18,11 +18,19 @@ var BootcampSchema = new Schema({
          "id": {type: Schema.Types.ObjectId, ref: 'Session'},
          "title": String,
          "description": String,
-         "owner": {
+         "primaryOwner": {
             "id": {type: Schema.Types.ObjectId, ref: "User"},
             "name": String,
             "profileImageId": String
-         }
+         },
+         "owners": [
+            {
+               "id": {type: Schema.Types.ObjectId, ref: "User"},
+               "name": String,
+               "profileImageId": String,
+               "primary": Boolean
+            }
+         ]
       }
    ],
    duration: Number
