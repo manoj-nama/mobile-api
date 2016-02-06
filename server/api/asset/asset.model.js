@@ -20,6 +20,11 @@ var AssetSchema = new Schema({
    }
 });
 
+AssetSchema.index({publicId: 1});
+AssetSchema.index({type: 1});
+AssetSchema.index({"uploader.id": 1});
+AssetSchema.index({resourceUrl: 1}, {sparse: true});
+
 module.exports = mongoose.model('Asset', AssetSchema);
 
 

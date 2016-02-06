@@ -36,6 +36,9 @@ var BootcampSchema = new Schema({
    duration: Number
 });
 
+BootcampSchema.index({title: 1});
+BootcampSchema.index({running: 1});
+
 module.exports = mongoose.model('Bootcamp', BootcampSchema);
 
 

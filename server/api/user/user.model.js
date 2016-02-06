@@ -10,6 +10,7 @@ var UserSchema = new Schema({
 		lowercase: true,
 		required: true
 	},
+   socialId: String,
 	name: {
 		first: String,
 		last: String,
@@ -22,6 +23,10 @@ var UserSchema = new Schema({
 	role: {type: String, enum: ["USER", "ADMIN", "OWNER"], default: "USER"},
 	profileImage: String
 });
+
+UserSchema.index({email: 1, name: 1});
+UserSchema.index({role: 1});
+UserSchema.index({socialId: 1});
 
 module.exports = mongoose.model('User', UserSchema);
 

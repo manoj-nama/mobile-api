@@ -29,6 +29,9 @@ var SessionSchema = new Schema({
    }
 });
 
+SessionSchema.index({"createdBy.id": 1, enabled: 1});
+SessionSchema.index({enabled: 1, scheduleTime: 1});
+
 module.exports = mongoose.model('Session', SessionSchema);
 
 
