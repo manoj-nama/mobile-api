@@ -96,8 +96,11 @@ exports.destroyImage = function (publicId, callback) {
    cloudinary.uploader.destroy(publicId, callback, cloudManager.getDefaultConfig());
 };
 
-exports.deleteAllResources = function (callback) {
+exports.deleteAllResources = function (nextCursor, callback) {
    var cloudConfig = cloudManager.getDefaultConfig();
+   if(nextCursor) {
+      cloudConfig.next_cursor = nextCursor;
+   }
    cloudinary.api.delete_all_resources(callback, cloudConfig);
 };
 

@@ -6,6 +6,7 @@ var fs = require('fs'),
 module.exports = function (app) {
 	app.use("/v1/api/sessions", require("./api/session"));
 	app.use("/v1/api/users", require("./api/user"));
+	app.use("/v1/api/assets", require("./api/asset"));
 	app.use("/v1/api/bootcamps", require("./api/bootcamp"));
 	// app.use('/auth', require('./auth'));
 	
