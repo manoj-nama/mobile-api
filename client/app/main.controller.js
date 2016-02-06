@@ -3,7 +3,7 @@
 (function (angular) {
 
 	angular.module("api")
-		.controller("MainCtrl", function ($state) {
+		.controller("MainCtrl", function () {
 			//console.log("MainCtrl");
 		});
 

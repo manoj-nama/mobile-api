@@ -2,6 +2,7 @@
 
 var async = require("async"),
 	User = require("./api/user/user.model"),
+   Auth = require("./auth/auth.service"),
 	Session = require("./api/session/session.model"),
 	Bootcamp = require("./api/bootcamp/bootcamp.model");
 
@@ -17,7 +18,7 @@ function bootstrapUsers(callback) {
 			callback(null);
 		} else {
 			tasks.push(function (cb) {
-				new User({
+				var u = new User({
 					email: "manoj.nama@tothenew.com",
 					name: {
 						first: "manoj",
@@ -25,10 +26,12 @@ function bootstrapUsers(callback) {
 						full: "manoj nama"
 					},
 					role: "ADMIN"
-				}).save(cb);
+				});
+            u.password = Auth.encryptPassword("123456", u._id);
+            u.save(cb);
 			});
 			tasks.push(function (cb) {
-				new User({
+				var u = new User({
 					email: "sakshi.tyagi@tothenew.com",
 					name: {
 						first: "kaku",
@@ -36,7 +39,9 @@ function bootstrapUsers(callback) {
 						full: "kaku tyagi"
 					},
 					role: "ADMIN"
-				}).save(cb);
+				});
+            u.password = Auth.encryptPassword("123456", u._id);
+            u.save(cb);
 			});
 			async.parallel(tasks, callback);
 		}

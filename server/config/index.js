@@ -14,6 +14,10 @@ var all = {
          }
       }
    },
+   secrets: {
+      session: 'yomama',
+      sessionTimeMillis: process.env.SESSION_TIMEOUT || 2592000000 //DEFAULT: 30 days
+   },
    cloudinary: (function () {
       var CLOUDINARY_URL,
          cloudinary,

@@ -1,6 +1,8 @@
 'use strict';
 
-var User = require('./user.model');
+var User = require('./user.model'),
+   UserEnum = require("../../enum/user.enum"),
+   UserService = require("./user.service");
 
 exports.index = function (req, res) {
 	var offset = req.param("offset") || 0,
@@ -15,3 +17,25 @@ exports.index = function (req, res) {
 		}
 	});
 };
+
+/**
+ * Get my info
+ */
+exports.me = function (req, res, next) {
+   var userId = req.user._id;
+
+   User.findOne({_id: userId}, UserEnum.projections.defaults).lean().exec(function (err, user) {
+      if(err) {
+         return handleError(res, err);
+      } else if(user) {
+         return res.json(user);
+      } else {
+         return res.send(401);
+      }
+   });
+};
+
+function handleError(res, err) {
+   console.error("user.controller:", err);
+   return res.send(500, err);
+}

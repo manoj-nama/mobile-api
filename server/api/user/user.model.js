@@ -1,6 +1,7 @@
 'use strict';
 
 var mongoose = require('mongoose'),
+   userEnums = require("../../enum/user.enum"),
 	Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
@@ -20,7 +21,7 @@ var UserSchema = new Schema({
 	password: String,
 	dateCreated: {type: Number, default: Date.now},
 	lastUpdated: {type: Number, default: Date.now},
-	role: {type: String, enum: ["USER", "ADMIN", "OWNER"], default: "USER"},
+	role: {type: String, enum: userEnums.roleList, default: userEnums.roles.USER},
 	profileImage: String
 });
 
