@@ -4,7 +4,7 @@
    display: flex;
    color: #333;
    flex-wrap: wrap;
-   border-bottom: 1px solid #888;
+   border-bottom: 1px solid #555;
    background-color: #fff;
    position: fixed;
    top: 0;
@@ -30,11 +30,11 @@
    padding: 10px;
 }
 .dashboard-header .menu a.active {
-   background-color: #888;
+   background-color: #555;
    color: #fff;
 }
 .dashboard-header .menu a:hover {
-   background-color: #777;
+   background-color: #333;
    color: #fff;
 }
 
