@@ -9,6 +9,7 @@ var BootcampSchema = new Schema({
       required: true
    },
    description: String,
+   bootcampLogo: String,
    running: {type: Boolean, default: true},
    dateCreated: {type: Number, default: Date.now},
    lastUpdated: {type: Number, default: Date.now},
