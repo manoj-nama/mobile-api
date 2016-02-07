@@ -3,8 +3,8 @@
 var Session = require('./session.model');
 
 exports.index = function (req, res) {
-	var offset = req.param("offset") || 0,
-		limit = req.param("limit") || 20;
+	var offset = req.query["offset"] || 0,
+		limit = req.query["limit"] || 20;
 
 	Session.find().skip(offset).limit(limit).lean().exec(function (err, sessions) {
 		if(err) {
