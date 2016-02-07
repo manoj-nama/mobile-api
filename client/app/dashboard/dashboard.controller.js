@@ -3,8 +3,12 @@
 (function (angular) {
 
 	angular.module("api")
-		.controller("DashboardCtrl", function () {
-			//console.log("DashboardCtrl");
-		});
+		.controller("DashboardCtrl", ["InfoApi", function (InfoApi) {
+         var self = this;
+
+         InfoApi.dashboard({}, function (resp) {
+            self.metrics = resp;
+         });
+		}]);
 
 })(angular);
