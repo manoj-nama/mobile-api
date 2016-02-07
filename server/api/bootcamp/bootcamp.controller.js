@@ -22,7 +22,7 @@ exports.show = function (req, res) {
 
    Bootcamp.findOne({_id: campId}).lean().exec(function (err, camp) {
       if(err) {
-         console.log("Error fetching Session", err);
+         console.log("Error fetching Bootcamp", err);
          res.status(404).send(err);
       } else {
          res.status(200).json({bootcamp: camp});

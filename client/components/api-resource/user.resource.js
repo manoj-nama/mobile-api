@@ -10,6 +10,9 @@
                params: {
                   id: 'me'
                }
+            },
+            list: {
+               method: "GET"
             }
          });
       });

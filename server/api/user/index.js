@@ -8,5 +8,6 @@ var express = require('express'),
 
 router.get("/", auth.hasRole(userEnums.roles.ADMIN), controller.index);
 router.get("/me", auth.isAuthenticated(), controller.me);
+router.get("/:id", auth.isAuthenticated(), controller.show);
 
 module.exports = router;

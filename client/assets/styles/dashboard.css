@@ -80,6 +80,7 @@
 }
 .list-wrap .list-item h3 {
    padding: 3px 0;
+   text-transform: capitalize;
 }
 .list-wrap .list-item p {
    font-family: "Open Sans", sans-serif;

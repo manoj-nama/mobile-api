@@ -9,7 +9,6 @@
 
          self.fetchSessions = function () {
             SessionApi.list({}, function(resp) {
-               //console.log(resp.sessions[0]);
                self.sessions = resp.sessions;
             });
          };
@@ -17,7 +16,6 @@
 		}])
       .controller("SessionDetailCtrl", ["$stateParams", "SessionApi", function ($stateParams, SessionApi) {
          var self = this;
-         //console.log("SessionDetailCtrl", $stateParams);
 
          SessionApi.get({id: $stateParams.sessionId}, function (resp) {
             console.log(resp.session);
@@ -26,10 +24,8 @@
       }])
       .controller("SessionEditCtrl", ["$stateParams", "SessionApi", function ($stateParams, SessionApi) {
          var self = this;
-         //console.log("SessionDetailCtrl", $stateParams);
 
          SessionApi.get({id: $stateParams.sessionId}, function (resp) {
-            console.log(resp.session);
             self.session = resp.session;
          });
       }]);

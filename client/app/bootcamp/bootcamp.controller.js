@@ -16,7 +16,6 @@
          var self = this;
 
          BootcampApi.get({id: $stateParams.bootcampId}, function (resp) {
-            console.log(resp.bootcamp);
             self.bootcamp = resp.bootcamp;
          });
 		}]);

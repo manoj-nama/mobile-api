@@ -46,6 +46,12 @@
                templateUrl: "app/users/user.html",
                controller: "UserCtrl as UserCtrl"
             })
+            .state("main.users.detail", {
+               url: "/:userId",
+               authenticate: true,
+               templateUrl: "app/users/user.detail.html",
+               controller: "UserDetailCtrl as UserCtrl"
+            })
             .state("main.bootcamp", {
                url: "bootcamp",
                authenticate: true,
