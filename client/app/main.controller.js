@@ -3,8 +3,14 @@
 (function (angular) {
 
 	angular.module("api")
-		.controller("MainCtrl", function () {
-			//console.log("MainCtrl");
-		});
+		.controller("MainCtrl", ["Auth", "$state", function (Auth, $state) {
+         var MainCtrl = this;
+
+         MainCtrl.logout = function () {
+            Auth.logout(function () {
+               $state.go("login");
+            });
+         };
+		}]);
 
 })(angular);

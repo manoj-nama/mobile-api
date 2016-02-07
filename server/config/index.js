@@ -6,7 +6,7 @@ var _ = require("lodash"),
 
 var all = {
    ip: "0.0.0.0",
-   port: 9000,
+   port: 3000,
    mongo: {
       options: {
          db: {
