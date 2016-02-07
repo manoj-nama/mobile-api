@@ -1,3 +1,16 @@
-<header id="nav">
-   <h1 class="page-center">Bootcamp</h1>
-</header>
+<section class="container" data-ui-view="">
+   <div class="list-wrap">
+      <div class="list-item"
+           data-ui-sref="main.bootcamp.detail({bootcampId: bootcamp._id})"
+           data-ng-repeat="bootcamp in BootcampCtrl.bootcamps track by $index">
+
+         <!--Session logo here-->
+         <!--<img src="http://res.cloudinary.com/djvymo9lw/image/upload/w_50,h_50,r_5px,q_30/JS-logo_tpxyzn.png" alt="" class="sess-logo"/>-->
+
+         <div class="info">
+            <h3>{{bootcamp.title}}</h3>
+            <p>{{bootcamp.description}}</p>
+         </div>
+      </div>
+   </div>
+</section>

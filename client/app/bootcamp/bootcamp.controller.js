@@ -3,13 +3,22 @@
 (function (angular) {
 
 	angular.module("api")
-		.controller("BootcampCtrl", [function () {
+		.controller("BootcampCtrl", ["BootcampApi", function (BootcampApi) {
          var self = this;
-			//console.log("BootcampCtrl");
+         self.fetchBootcamps = function () {
+            BootcampApi.list({}, function(resp) {
+               self.bootcamps = resp.bootcamps;
+            });
+         };
+         self.fetchBootcamps();
 		}])
-		.controller("BootcampDetailCtrl", [function () {
+		.controller("BootcampDetailCtrl", ["$stateParams", "BootcampApi", function ($stateParams, BootcampApi) {
          var self = this;
-			//console.log("BootcampCtrl");
+
+         BootcampApi.get({id: $stateParams.bootcampId}, function (resp) {
+            console.log(resp.bootcamp);
+            self.bootcamp = resp.bootcamp;
+         });
 		}]);
 
 })(angular);
