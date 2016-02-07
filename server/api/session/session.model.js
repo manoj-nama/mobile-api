@@ -26,7 +26,8 @@ var SessionSchema = new Schema({
       name: String,
       email: String,
       profileImageId: String
-   }
+   },
+   tags: []
 });
 
 SessionSchema.index({"createdBy.id": 1, enabled: 1});
