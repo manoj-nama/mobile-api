@@ -7,7 +7,7 @@ var _ = require("lodash"),
 var all = {
    ip: "0.0.0.0",
    port: 3000,
-   sslPort: 3002,
+   sslPort: 443,
    mongo: {
       options: {
          db: {
