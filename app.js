@@ -33,5 +33,5 @@ server.listen(config.port, config.ip, function () {
 	console.log('Server listening on port', config.port);
 });
 sslServer.listen(config.sslPort, config.ip, function () {
-	console.log('Server listening on port', config.port);
+	console.log('Server listening on port', config.sslPort);
 });
