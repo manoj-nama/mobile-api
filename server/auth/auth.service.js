@@ -115,7 +115,7 @@ function hasPassword(req, res, next) {
  * Returns a jwt token signed by the app secret
  */
 function signToken(id) {
-   return jwt.sign({ _id: id }, config.secrets.session, { expiresInMinutes: config.secrets.sessionTimeMillis / (1000 * 60) });
+   return jwt.sign({ _id: id }, config.secrets.session, { expiresIn: config.secrets.sessionTimeMillis / (1000) });
 }
 
 /**
