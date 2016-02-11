@@ -18,6 +18,17 @@
          BootcampApi.get({id: $stateParams.bootcampId}, function (resp) {
             self.bootcamp = resp.bootcamp;
          });
+		}])
+		.controller("BootcampFormCtrl", ["$stateParams", "BootcampApi", function ($stateParams, BootcampApi) {
+         var self = this;
+         self.isNew = true;
+
+         if($stateParams.bootcampId) {
+            self.isNew = false;
+            BootcampApi.get({id: $stateParams.bootcampId}, function (resp) {
+               self.bootcamp = resp.bootcamp;
+            });
+         }
 		}]);
 
 })(angular);

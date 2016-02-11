@@ -59,10 +59,22 @@
                controller: "BootcampCtrl as BootcampCtrl"
             })
             .state("main.bootcamp.detail", {
-               url: "/:bootcampId",
+               url: "/show/:bootcampId",
                authenticate: true,
                templateUrl: "app/bootcamp/bootcamp.detail.html",
                controller: "BootcampDetailCtrl as BootcampCtrl"
+            })
+            .state("main.bootcamp.create", {
+               url: "/new",
+               authenticate: true,
+               templateUrl: "app/bootcamp/bootcamp.form.html",
+               controller: "BootcampFormCtrl as BootcampCtrl"
+            })
+            .state("main.bootcamp.edit", {
+               url: "/edit/:bootcampId",
+               authenticate: true,
+               templateUrl: "app/bootcamp/bootcamp.form.html",
+               controller: "BootcampFormCtrl as BootcampCtrl"
             });
       }]);
 
