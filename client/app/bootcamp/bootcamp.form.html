@@ -14,4 +14,27 @@
          </form>
       </div>
    </div>
+
+
+   <div id="direct_upload"
+        data-ngf-drop="uploadFiles($files)"
+        data-ngf-drag-over-class="dragOverClass($event)"
+        data-ng-model="files"
+        data-ng-multiple="false">
+
+      <form>
+         <div class="form_line">
+            <label>Image:</label>
+
+            <div class="form_controls">
+               <div class="upload_button_holder">
+                  <a href="javascript:void(0)" class="upload_button" ngf-select="BootcampCtrl.upload($files)" title="upload"
+                       resetOnClick="true">Upload
+                  </a>
+               </div>
+            </div>
+         </div>
+         <br/><br/>
+      </form>
+   </div>
 </section>
