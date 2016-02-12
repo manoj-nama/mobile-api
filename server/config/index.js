@@ -23,10 +23,10 @@ var all = {
          cloudinary,
          cloudinaryAuth;
       var obj = {
-         name: "djvymo9lw",
-         key: "789611952196239",
-         upload_preset: process.env.CLOUDINARY_UPLOAD_PRESET || 'ueavkrfy',
-         secret: "lwceFvPu4EyrMp2NV-eTcu1YmMs",
+         name: "<somename>",
+         key: "<somekey>",
+         upload_preset: process.env.CLOUDINARY_UPLOAD_PRESET || '<somepreset>',
+         secret: "<somesecret>",
          callbackUrl: "/cloudinary_cors.html"
       };
       if (process.env['CLOUDINARY_URL']) {

@@ -5,3 +5,4 @@ dist
 .build
 *.log
 client/bower_components
+runApp.sh
