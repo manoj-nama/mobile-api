@@ -7,6 +7,7 @@
       "ui.bootstrap",
       "ngResource",
       "cloudinary",
+      "ngTagsInput",
       "ngFileUpload",
       "ngCookies"
    ])
