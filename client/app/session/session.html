@@ -1,4 +1,7 @@
 <section class="container" data-ui-view="">
+   <div class="action-bar">
+      <a class="button" ui-sref="main.sessions.create"><i class="fa fa-plus"></i> New</a>
+   </div>
    <div class="list-wrap">
       <div class="list-item"
            data-ui-sref="main.sessions.detail({sessionId: session._id})"
@@ -9,6 +12,7 @@
 
          <div class="info">
             <h3>{{session.title}}</h3>
+
             <p>{{session.description}}</p>
          </div>
       </div>
