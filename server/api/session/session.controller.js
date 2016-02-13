@@ -1,30 +1,68 @@
 'use strict';
 
-var Session = require('./session.model');
+var Session = require('./session.model'),
+   SessionService = require("./session.api.service"),
+   EventType = require("../../enum/event.enum");
 
 exports.index = function (req, res) {
-	var offset = req.query["offset"] || 0,
-		limit = req.query["limit"] || 20;
+   var options = {
+      offset: req.query["offset"] || 0,
+      limit: req.query["limit"] || 20,
+      projection: {},
+      criteria: {}
+   };
 
-	Session.find().skip(offset).limit(limit).lean().exec(function (err, sessions) {
-		if(err) {
-			console.log("Error fetching Sessions", err);
-			res.status(404).send(err);
-		} else {
-			res.status(200).json({sessions: sessions});
-		}
-	});
+   SessionService.search(options)
+      .once(EventType.ERROR, function (err) {
+         return handleError(res, err);
+      })
+      .once(EventType.SUCCESS, function (sessions) {
+         res.status(200).json({sessions: sessions});
+      });
+};
+
+exports.search = function (req, res) {
+   var options = {
+      offset: req.body.offset || 0,
+      limit: req.body.limit || 20,
+      projection: req.body.projection || {},
+      criteria: req.body.criteria || {}
+   };
+
+   SessionService.search(options)
+      .once(EventType.ERROR, function (err) {
+         return handleError(res, err);
+      })
+      .once(EventType.SUCCESS, function (sessions) {
+         res.status(200).json({sessions: sessions});
+      });
 };
 
 exports.show = function (req, res) {
-   var sessId = req.params.id;
-
-   Session.findOne({_id: sessId}).lean().exec(function (err, session) {
-      if(err) {
-         console.log("Error fetching Session", err);
-         res.status(404).send(err);
-      } else {
+   SessionService.show(req.params.id)
+      .once(EventType.ERROR, function (err) {
+         return handleError(res, err);
+      })
+      .once(EventType.SUCCESS, function (session) {
          res.status(200).json({session: session});
-      }
-   })
+      });
 };
+
+exports.create = function (req, res) {
+   SessionService.create(req.body, req.user)
+      .once(EventType.ERROR, function (err) {
+         return handleError(res, err);
+      })
+      .once(EventType.UNAUTHORIZED, function (err) {
+         res.status(403).send(err);
+      })
+      .once(EventType.SUCCESS, function (resp) {
+         res.status(200).json(resp);
+      })
+};
+
+
+function handleError(res, err) {
+   console.error("session.controller:", err);
+   return res.status(500).send(err);
+}

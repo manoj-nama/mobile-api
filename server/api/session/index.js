@@ -7,6 +7,8 @@ var express = require('express'),
 	router = express.Router();
 
 router.get("/", auth.isAuthenticated(), controller.index);
+router.post("/", auth.isAuthenticated(), controller.create);
+router.post("/search", auth.isAuthenticated(), controller.search);
 router.get("/:id", auth.isAuthenticated(), controller.show);
 
 module.exports = router;
