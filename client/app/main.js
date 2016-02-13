@@ -29,16 +29,22 @@
                controller: "SessionCtrl as SessionCtrl"
             })
             .state("main.sessions.detail", {
-               url: "/:sessionId",
+               url: "/show/:sessionId",
                authenticate: true,
                templateUrl: "app/session/session.detail.html",
                controller: "SessionDetailCtrl as SessionDetailCtrl"
             })
+            .state("main.sessions.create", {
+               url: "/new",
+               authenticate: true,
+               templateUrl: "app/session/session.form.html",
+               controller: "SessionFormCtrl as SessionCtrl"
+            })
             .state("main.sessions.edit", {
                url: "/edit/:sessionId",
                authenticate: true,
-               templateUrl: "app/session/session.edit.html",
-               controller: "SessionEditCtrl as SessionEditCtrl"
+               templateUrl: "app/session/session.form.html",
+               controller: "SessionFormCtrl as SessionCtrl"
             })
             .state("main.users", {
                url: "users",

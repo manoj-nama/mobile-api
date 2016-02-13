@@ -22,7 +22,7 @@
             self.session = resp.session;
          });
       }])
-      .controller("SessionEditCtrl", ["$stateParams", "SessionApi", function ($stateParams, SessionApi) {
+      .controller("SessionFormCtrl", ["$stateParams", "SessionApi", function ($stateParams, SessionApi) {
          var self = this;
 
          SessionApi.get({id: $stateParams.sessionId}, function (resp) {
