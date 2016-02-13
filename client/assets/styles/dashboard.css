@@ -4,16 +4,23 @@
    display: flex;
    color: #333;
    flex-wrap: wrap;
-   border-bottom: 1px solid #555;
+   border-bottom: 1px solid #eee;
    background-color: #fff;
    position: fixed;
    top: 0;
 }
+
+.dashboard-header.scrolled {
+   border-bottom: 1px solid #fff;
+   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
 .dashboard-header a {
    text-decoration: none;
    outline: none;
    color: #333;
 }
+
 .dashboard-header .menu {
    flex: 1;
    flex-wrap: wrap;
@@ -21,6 +28,7 @@
    display: flex;
    justify-content: center;
 }
+
 .dashboard-header .menu a {
    display: inline-block;
    outline: none;
@@ -31,10 +39,12 @@
    text-align: center;
    padding: 10px;
 }
+
 .dashboard-header .menu a.active {
    background-color: #555;
    color: #fff;
 }
+
 .dashboard-header .menu a:hover {
    background-color: #333;
    color: #fff;
@@ -48,11 +58,13 @@
 .list-wrap {
 
 }
+
 .list-wrap.filled {
    border: 0;
    background-color: #fff;
    border-radius: 5px;
 }
+
 .list-wrap .list-item {
    padding: 10px;
    cursor: pointer;
@@ -63,36 +75,43 @@
    display: flex;
    align-items: center;
 }
+
 .list-wrap .list-item.no-click {
    cursor: default;
    pointer-events: none;
 }
+
 .list-wrap .list-item:last-child {
    border-bottom: 1px solid #fff;
 }
+
 .list-wrap .list-item:hover {
    background-color: #eee;
    border-bottom: 1px solid #ddd;
 }
+
 .list-wrap .list-item:active {
    opacity: 0.3;
    box-shadow: none;
 }
+
 .list-wrap .list-item .sess-logo {
    margin-right: 10px;
 }
+
 .list-wrap .list-item .info {
    flex: 1;
 }
+
 .list-wrap .list-item h3 {
    padding: 3px 0;
    text-transform: capitalize;
 }
+
 .list-wrap .list-item p {
    font-family: "Open Sans", sans-serif;
    font-weight: 300;
 }
-
 
 .list-wrap.filled h1 {
    padding: 10px 0;
@@ -121,7 +140,7 @@ footer.page-footer ul.footer-links {
    display: flex;
 }
 
-footer.page-footer ul.footer-links li{
+footer.page-footer ul.footer-links li {
    margin: 0 5px;
 }
 
@@ -130,6 +149,7 @@ footer.page-footer ul.footer-links li a {
    outline: none;
    font-size: 0.9em;
 }
+
 footer.page-footer ul.footer-links li a:hover {
    color: #333;
    text-decoration: none;
