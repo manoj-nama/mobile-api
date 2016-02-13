@@ -13,7 +13,7 @@
 
 .dashboard-header.scrolled {
    border-bottom: none;
-   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
 .dashboard-header a {
@@ -39,6 +39,10 @@
    font-family: "Open Sans", sans-serif;
    text-align: center;
    padding: 10px;
+   font-size: 1.1em;
+}
+.dashboard-header .menu a span {
+   font-family: "Open Sans", sans-serif;
 }
 
 .dashboard-header .menu a.active {
