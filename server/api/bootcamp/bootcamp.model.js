@@ -19,6 +19,8 @@ var BootcampSchema = new Schema({
          "id": {type: Schema.Types.ObjectId, ref: 'Session'},
          "title": String,
          "description": String,
+         "scheduleTime": Number,
+         "duration": Number,
          "primaryOwner": {
             "id": {type: Schema.Types.ObjectId, ref: "User"},
             "name": String,

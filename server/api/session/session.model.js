@@ -13,7 +13,6 @@ var SessionSchema = new Schema({
    sessionLogo: String,
    dateCreated: {type: Number, default: Date.now},
    lastUpdated: {type: Number, default: Date.now},
-   scheduleTime: {type: Number, default: Date.now},
    assets: [
       {
          "id": {type: Schema.Types.ObjectId, ref: 'Asset'},
