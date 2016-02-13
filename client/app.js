@@ -10,12 +10,16 @@
       "ngFileUpload",
       "ngCookies"
    ])
-      .config(["$locationProvider", "$urlRouterProvider", "cloudinaryProvider",
-         function ($locationProvider, $urlRouterProvider, cloudinaryProvider) {
+      .config(["$locationProvider", "$urlRouterProvider", "cloudinaryProvider", "AppConfig",
+         function ($locationProvider, $urlRouterProvider, cloudinaryProvider, AppConfig) {
             $locationProvider.html5Mode(true);
             $locationProvider.hashPrefix("!");
 
             $urlRouterProvider.otherwise("/login");
+
+            cloudinaryProvider
+               .set("cloud_name", AppConfig.cloudinary.cloud_name)
+               .set("upload_preset", AppConfig.cloudinary.upload_preset);
          }])
       .run(["$rootScope", "Auth", "$state",
          function ($rootScope, Auth, $state) {

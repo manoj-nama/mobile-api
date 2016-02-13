@@ -10,6 +10,7 @@ module.exports = function (app) {
    app.use("/v1/api/info", require("./api/info"));
    app.use("/v1/api/bootcamps", require("./api/bootcamp"));
    app.use('/auth', require('./auth'));
+   app.get("/util/config", require("./util/util.controller").getConfig);
 
    app.route('/*')
       .get(function (req, res, next) {
