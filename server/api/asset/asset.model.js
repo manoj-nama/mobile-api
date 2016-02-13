@@ -1,13 +1,15 @@
 'use strict';
 
 var mongoose = require('mongoose'),
+   assetEnums = require("../../enum/asset.enum"),
    Schema = mongoose.Schema;
 
 var AssetSchema = new Schema({
    title: String,
-   type: String,
+   type: {type: String, enum: assetEnums.typeList, default: assetEnums.types.URL},
    description: String,
    publicId: String,
+   origFilename: String,
    resourceUrl: String,
    enabled: {type: Boolean, default: true},
    dateCreated: {type: Number, default: Date.now},
