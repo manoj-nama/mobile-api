@@ -5,7 +5,8 @@ exports.types = {
    PRESENTATION: "PRESENTATION",
    URL: "URL",
    DOCUMENT: "DOCUMENT",
-   ARCHIVE: "ARCHIVE"
+   ARCHIVE: "ARCHIVE",
+   YOUTUBE: "YOUTUBE"
 };
 
 exports.typeList = [
@@ -13,7 +14,8 @@ exports.typeList = [
    "PRESENTATION",
    "URL",
    "DOCUMENT",
-   "ARCHIVE"
+   "ARCHIVE",
+   "YOUTUBE"
 ];
 
 exports.extensions = {
@@ -21,6 +23,7 @@ exports.extensions = {
    PRESENTATION: ["ppt", "pptx", "odf"],
    URL: "url",
    DOCUMENT: ["doc", "docx"],
-   ARCHIVE: ["zip", "tar", "tar.gz"]
+   ARCHIVE: ["zip", "tar", "tar.gz"],
+   YOUTUBE: "youtube"
 };
 
