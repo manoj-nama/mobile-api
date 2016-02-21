@@ -61,6 +61,11 @@ form label {
    padding: 10px 0;
 }
 
+form label.spacer {
+   padding: 5px;
+   margin: 0;
+}
+
 form button[type=submit] {
    align-self: flex-start;
    padding: 10px 25px;
@@ -151,4 +156,79 @@ tags-input .tags .tag-item.selected {
 tags-input .tags .tag-item span, tags-input .tags .input {
    font: 1em "Open Sans", sans-serif;
    font-weight: 300;
+}
+
+.dropdown {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   border-radius: 5px;
+   overflow: hidden;
+}
+.dropdown.open {
+   background-color: #fff;
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown .dropdown-handle {
+   color: #333;
+   cursor: pointer;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+.dropdown .dropdown-handle:hover {
+   background-color: #f8f8f8;
+}
+
+.dropdown .dropdown-handle::after {
+   content: '';
+   position: absolute;
+   right: 13px;
+   top: 18px;
+   border-top: 8px solid #666;
+   border-left: 6px solid transparent;
+   border-right: 6px solid transparent;
+}
+
+.dropdown.open .dropdown-handle {
+   background-color: #fff;
+   display: none;
+}
+
+.dropdown .dropdown-menu {
+   display: none;
+}
+
+.dropdown .dropdown-menu .dropdown-item {
+   display: flex;
+   flex-direction: column;
+}
+
+.dropdown .dropdown-menu .dropdown-item a {
+   padding: 10px;
+   color: #333;
+   transition: background 0.3s;
+   text-decoration: none;
+}
+
+.dropdown .dropdown-menu .dropdown-item a:hover {
+   background-color: #ddd;
+   color: #000;
+}
+
+.dropdown .dropdown-menu .dropdown-item a > span {
+   transition: transform 0.3s;
+   display: block;
+   transform: translateX(0);
+}
+.dropdown .dropdown-menu .dropdown-item a:hover > span {
+   transform: translateX(3px);
+}
+
+.dropdown.open .dropdown-menu {
+   display: flex;
+   flex-direction: column;
+   list-style: none;
 }

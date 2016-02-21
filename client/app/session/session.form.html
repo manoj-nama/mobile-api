@@ -33,13 +33,27 @@
                <span>Files</span>
                <a class="button"><i class="fa fa-plus"></i></a>
             </label>
+
             <div class="file-uploader-wrap columns">
                <ng-form class="asset-uploader">
                   <label for="name">Name</label>
                   <input type="text" required name="name" id="name"/>
 
-                  <label for="filetype">Type</label>
-                  <input type="text" required name="filetype" id="filetype"/>
+                  <label>Asset Type</label>
+                  <div data-uib-dropdown="" class="dropdown">
+                     <a class="dropdown-handle" data-uib-dropdown-toggle="">Type</a>
+                     <ul class="dropdown-menu" data-uib-dropdown-menu="">
+                        <li class="dropdown-item">
+                           <a href="javascript:void(0)"><span>PDF</span></a>
+                        </li>
+                        <li class="dropdown-item">
+                           <a href="javascript:void(0)"><span>Youtube video</span></a>
+                        </li>
+                        <li class="dropdown-item">
+                           <a href="javascript:void(0)"><span>DOC</span></a>
+                        </li>
+                     </ul>
+                  </div>
                </ng-form>
             </div>
 
